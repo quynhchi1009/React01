@@ -1,0 +1,41 @@
+SPA: Single-Page Application
+- React la 1 trong nhung thu vien tao ra SPA
+- VD: facebook, Shoppee, 30Shine, chotot, zingmp3, F8
+- Khong yeu cau tai lai trang trong qua trinh su dung
+
+MPA
+- Tai lai trang trong qua trinh su dung
+
+-------------------------------------------------------
+
+## So Sánh
+
+### Tốc độ
+- SPA nhanh hon khi su dung
+  + Phan lon tai nguyen duoc tai trong lan dau 
+  + Trang chỉ tải thêm dữ liệu mới khi cần
+- MPA chậm hơn khi sử dụng
+  + Luôn tải lại toàn bộ trang web khi truy cập và chuyển hướng
+
+### Bóc tách
+- SPA có frontend riêng biệt
+- MPA có frontend và backend phụ thuộc nhau, được đặt trong cùng 1 dự án
+
+## SEO
+- SPA không thân thiện với SEO như SPA
+- Trải nghiệm thiết bị di động tốt hơn
+
+### UX
+- SPA mang lại trải nghiệm tốt hơn, nhất là các thao tác chuyển trang
+- Trải nghiệm thiết bị di động tốt hơn
+
+## Quá trình phát triển
+- SPA dễ tái sử dụng code (component)
+- SPA dễ dàng bóc tách backend và frontend
+  + Chia team phát triển song song
+  + Phát triển thêm mobile app dễ dàng
+
+
+## Phụ thuộc JavaScript
+- SPA phụ thuốc hoàn toàn vào JS
+- MPA có thể không cần JS
