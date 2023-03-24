@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+</head>
+<body>
+    <script> 
+        //////// Tao <h1 title="Hello" class="heading">Hello Quynh Chi Lai</h1>
+        //C1: DOM
+        const h1DOM = document.createElement("h1");
+        h1DOM.title = "Hello";
+        h1DOM.className = "heading"
+        h1DOM.innerText = "Hello Quynh Chi Lai"
+        document.body.appendChild(h1DOM)
+
+        //C2: React -> React DOM
+        //React.createElement(type, props, children)
+        //children cung la 1 props
+        const h1React = React.createElement("h1", {
+            title: "Hello",
+            className: "Heading",
+        }, "Hello Quynh Chi Lai!")
+
+        console.dir(h1DOM)
+        console.log(h1React)
+
+
+
+        ///////// Tao:
+        // <ul>
+        //     <li>JS</li>
+        //     <li>React</li>
+        // </ul>
+        //DOM
+        const ulDOM = document.createElement("ul");
+        ulDOM.id = "ulDOM";
+        ulDOM.style = "color: red; font-size: 30px";
+        const liDOM1 = document.createElement("li");
+        liDOM1.innerText = "JS"
+        liDOM1.id = "liDOM1"
+        ulDOM.appendChild(liDOM1)
+        const liDOM2 = document.createElement("li");
+        liDOM1.innerText = "React"
+        ulDOM.appendChild(liDOM2)
+
+        //React
+        const ulReact = React.createElement(
+            "ul",
+            {
+                id : "ulReact",
+                style: "color: red; font-size: 30px"
+            },
+            React.createElement("li", {id: "liReact1"}, "JS"),
+            React.createElement("li", null, "React"),
+        )
+        console.dir(ulDOM)
+        console.log(ulReact)
+    </script>
+</body>
+</html>
