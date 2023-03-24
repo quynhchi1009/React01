@@ -1,0 +1,13 @@
+1. Github, NPMJS, UNPKG
+- github.com/facebook/React
+- unpkg = content delivery network for everything on npm
+unpkg.com/react
+copy "cjs/react.development.js" when work in development
+paste and replace "index.js" in search bar
+
+2. Add React to website
+https://17.reactjs.org/docs/add-react-to-a-website.html#step-2-add-the-script-tags
+
+1 constant React.
+có thể in ra trong script
+console.log(React.version)
