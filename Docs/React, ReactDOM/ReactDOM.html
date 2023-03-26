@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React DOM</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+</head>
+
+<body>
+    <!-- 
+        ReactDOM = library connect Reacts + DOM
+        React-Native -> Build IOS, Android 
+    -->
+    <!-- <div class="post-item">
+        <h2 title="Hoc React tai F8">Hoc ReactJS</h2>
+        <p>ReactJS tu co ban den nang cao</p>
+    </div> -->
+
+    <div id="root"></div>
+
+    <script>
+        //React
+        const postItem = React.createElement(
+            "div",
+            {
+                className: "post=item"
+            },
+            React.createElement(
+                "h2",
+                {
+                    title: "Hoc React tai F8"
+                },
+                "Hoc ReactJS"
+            ),
+            React.createElement("p", {}, "ReactJS tu co ban den nang cao")
+            )
+
+            //Get root element
+            const root = document.getElementById("root")
+
+            //ReactDOM => render UI
+            ReactDOM.render(postItem, root)
+    </script>
+</body>
+
+</html>
