@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX render Arrays</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 
+        Taị sao khi code thuần, dùng map phải join("")?
+            Khi code thuần, phải sử dụng element.innderHTML = "", nên cần join để chuyển đỗi mảng thành chuỗi.
+            JSX khong phải là chuỗi.
+
+        Warning: Each child in a list should have a unique "key"
+            Add "key" property to element. e.g: <li key="1"></li>
+            Thông thường, sử dụng index của array làm key
+
+        Render 2 elements cung 1 luc
+            Use <React.Fragment></React.Fragment>
+    -->
+    <div id="root"></div>
+    <script type="text/babel">
+        const courses = [
+            {
+                name: "HTML, CSS",
+            },
+            {
+                name: "Responsive web design",
+            },
+            {
+                name: "ReactJS"
+            }
+        ]
+
+        const jsx = (
+            <ul>
+                {courses.map((course, index) =>
+                    <li key={index}>{course.name}</li>    
+                )}
+            </ul>
+        )
+
+        const jsx2 = (
+            <React.Fragment>            
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+            </React.Fragment>
+
+        )
+
+        ReactDOM.render(jsx, document.getElementById("root"))
+    </script>
+    
+</body>
+
+</html>
