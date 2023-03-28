@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 
+        Props trong JSX
+
+        <YourComponent
+            propName1="String literals"
+            propName2={expression}
+        />
+
+        - Props default to true
+        - Spread/Rest props
+        - Children prop
+            <YourComponent>String literals</YourComponent>
+            <YourComponent>{expression}</YourComponent>
+        - Render props
+    -->
+    <id id="root"></id>
+    <script type="text/babel">
+
+        //Props default to true
+        function Button({title, primary}) {
+            console.log(primary)
+            //Logic with primary
+            return <button>{title}</button>
+        }
+
+        //Spread/Rest Props
+        function Input({label, ...inputProps}){
+            return (
+                <div>
+                    <label for="">{label}</label>
+                    <input {...inputProps}/>
+                    </div>
+            )
+        }
+
+        //Children prop
+        function Button2({ children }) {
+            return <button>{children}</button>
+        }
+ 
+        function List({data, children}){
+            return (
+                <ul>{data.map(...props => children(...props))}</ul>
+            )
+        }
+
+        function App() {
+            const title = "Hello"        
+            const cars = ["BWM", "Honda", "Mazda"]
+
+            return (<div id="wrapper">
+                    <Button title="Click me!"/>
+                    <Button primary title={title} />
+                    <Input
+                        label="Full name"
+                        type="radio"
+                        placeholder="Enter name..."
+                        title="Input"
+                        onFocus={() => {console.log(Math.random())}}
+                    />
+                    <Button2>Click me!</Button2>
+                    <List data={cars}>
+                        {(item, index) => <li key={index}>{item}</li>}
+                    </List>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById("root"))
+    </script>
+</body>
+
+</html>
