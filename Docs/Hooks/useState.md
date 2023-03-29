@@ -55,6 +55,7 @@ const handleUpdate = () => {
         bio: "xxx"
     })
 }
+console.log(info) //Output?
 return (
     <div className="App" style={{ padding: 20 }}>
         <h1>{JSON.stringify(info)}</h1>            
