@@ -1,0 +1,30 @@
+- Hook chi dung cho function component
+- Component don gian va tro nen de hieu
+    + Không bị chia logic ra như methods trong lifecycle của class component
+    + Không cần sử dụng "this"
+- Su dung hooks khi nao?
+    + Dự án mới: hooks
+    + Dự án cũ:
+        @ Component moi: function component + hooks
+        @ Component cu: giu nguyen, có thời gian thì tối ưu sauu
+    + Logic nghiệp vụ cần sử dụng các tính chất của OOP -> sử dụng class component
+- Người mới nên bắt đầu với function component
+- Có thể kết hợp function và class component
+//function component
+function Item({ children }){
+    return <li> {children} </li>
+}
+
+//class component
+class List extends React.Component {
+    render() {
+        return (
+            <ul>
+                <Item>HTML</Item>
+                <Item>JavaScript</Item>
+                <Item>CSS</Item>
+            </ul>
+        )
+    }
+} 
+    
