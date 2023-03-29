@@ -1,0 +1,26 @@
+1.Go to folder REPOS/React de tao 1 du an
+2. sudo npx create-react-app nameProject
+3. sudo npm start --unsafe-perm=true --allow-root
+
+
+NPM 
+- Project Scope
+    npm install react react-dom --save -> install dependencies
+    npm i react react-dom --save -> install dependencies
+
+    npm install --save-dev react react-dom -> install devDependencies
+    npm i -D react react-dom -> install devDependencies
+
+    npm uninstall react react-dom
+- Global Scope
+    npm i --global create-react-app
+    npm i -g create-react-app
+
+    npm unintall -g create-react-app
+
+NPX : khi cai NodeJS, NPM dc install cung NPX
+
+Yarn
+    sudo npm i -g yarn
+
+

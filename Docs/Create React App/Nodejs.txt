@@ -1,0 +1,37 @@
+NodeJS = JavaScript runtime
+- Chrome V8 JavaScript Endtime
+- Tao ra may chu web (live Server)
+
+- He sinh thai cua NodeJs co NPM -> quan ly cac thu vien
+    => thay vi add script, chi can npm install library
+- De dang tao ra project React(webpack, Babel, React, ReactDOM, plugins etc.)
+
+https://fullstack.edu.vn/blog/phan-1-tao-du-an-reactjs-voi-webpack-va-babel.html
+
+node -v
+npm -v
+npx -v
+npm init
+sudo npm install webpack webpack-cli --save-dev
+sudo npm install react@17.0.2 react-dom@17.0.2 --save
+    OR
+    sudo npm install react@latest
+sudo npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+
+Tao public/index.html
+Tao src/index.js
+
+npm install css-loader style-loader --save-dev
+
+Tao webpack.config.js
+Tao .babelrc
+Them scripts vao package.json
+
+npm start
+npm install html-webpack-plugin --save-dev
+
+Tai webpack.config.js them....
+
+npm install webpack-dev-server --save-dev
+
+
