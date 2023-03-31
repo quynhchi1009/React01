@@ -21,7 +21,7 @@
 - Thu tu chay: return() => useEffect()
     Callback trong useEffect chỉ được gọi sau khi element đã được render vào DOM.
 - cleanup function luon duoc goi truoc khi component unmounted
-- cleanup function luon duoc goi truoc khi callback duoc goi
+- cleanup function luon duoc goi truoc khi callback duoc goi (tru lan mounted)
 
 useEffect(callback)
 useEffect(callback, [])
