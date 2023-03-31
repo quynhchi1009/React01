@@ -10,7 +10,7 @@
 - Goi call back sau khi them component vao DOM
 
 ## useEffect(callback, [])
-- Chi goi callback sau khi component mounted
+- Chi goi callback sau khi component mounted (1 lan duy nhat)
 
 ## useEffect(callback, [dependencies])
 - callback se duoc goi lai moi khi dependencies thay doi
@@ -21,6 +21,7 @@
 - Thu tu chay: return() => useEffect()
     Callback trong useEffect chỉ được gọi sau khi element đã được render vào DOM.
 - cleanup function luon duoc goi truoc khi component unmounted
+- cleanup function luon duoc goi truoc khi callback duoc goi
 
 useEffect(callback)
 useEffect(callback, [])
@@ -35,7 +36,9 @@ function Content() {
     const [title, setTitle] = useState("")
     const [posts, setPosts] = useState([])
     const [type, setType] = useState("posts")
+    const [showGoToTop, setShowGoToTop] = useState(false)
 
+    //Call API
     useEffect(() => {
         //Change title in Tab
         document.title = title
@@ -46,6 +49,18 @@ function Content() {
                 setPosts(posts)
             })
     }, [title, type])
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // if (window.scrollY >= 200) { 
+            //     setShowGoToTop(true)
+            // } else {
+            //     setShowGoToTop(false)
+            // }
+            setShowGoToTop(window.scrollY >= 200)
+        }
+        window.addEventListener('scroll', handleScroll)
+    }, [])
 
 
     return (
@@ -73,6 +88,16 @@ function Content() {
                     <li key={post.id}>{post.title || post.name}</li>
                 ))}
             </ul>
+            {showGoToTop && (
+                <button
+                    style={{
+                        position: 'fixed',
+                        right: 20,
+                        bottom: 20
+                    }}>
+                    Go to top
+                </button>
+            )}
         </div>
     )
 }
