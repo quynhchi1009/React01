@@ -32,17 +32,20 @@ export default App;
 ### Luu y
 - initial Value chi duoc dung cho lan dau tien
 - Component duoc rerender sau khi setState
+
 - setState voi callback
 const handleIncrease = () => {
     setCounter(prevState => prevState+1)
     setCounter(prevState => prevState+1)    
     setCounter(prevState => prevState+1)    
 }
+
 - initial State voi callback
 const [counter, setCounter] = useState(() => {
     const total = orders.reduce((total, cur) => total+ cur);
     return total;
 });
+
 - set State bang gia tri moi
 const [info, setInfo] = useState({
     name: "Nguyen Van A",
