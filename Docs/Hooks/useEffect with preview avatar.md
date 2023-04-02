@@ -1,4 +1,6 @@
-SAMPLE Project with useEffect
+## SAMPLE Project with useEffect
+# Chon anh avatar -> hien thi anh xem truoc.
+# Khi thay the anh, anh truoc do se duoc xoa khoi bo nho
 
 import { useEffect } from "react";
 import { useState } from "react";
@@ -18,6 +20,8 @@ function Content() {
 
     //Khi avatar thay doi, xoa review anh khoi storage
     useEffect(() => { 
+
+        //cleanup function
         return () => {
             avatar && URL.revokeObjectURL(avatar.preview);
         }

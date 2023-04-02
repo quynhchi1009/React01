@@ -15,6 +15,7 @@ function Content() {
             setCountdown(prevState => prevState - 1)
         }, 1000)
         
+        //cleanup function
         return () => clearInterval(timerId)
     }, [])
 
