@@ -5,7 +5,7 @@ import { useEffect, useLayoutEffect, useRef } from "react";
 import { useState } from "react";
 
 function Content() {
-    const [count, setCount] = useState(60)
+    const  [count, setCount] = useState(60)
 
     const timerId = useRef() //Object with value "current"
     const prev = useRef()
