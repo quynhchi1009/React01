@@ -1,3 +1,5 @@
+# VD 1: App dem so co 2 Up/down button
+
 import { useReducer } from "react";
 
 //Init State
@@ -36,3 +38,6 @@ function App() {
 }
 
 export default App;
+
+# VD2: Todo App
+
